@@ -21,3 +21,9 @@ DIA-CARE leverages the integration of multiple AI models to different services (
 ### Key features include:
 - 1. Simplified and user-friendly interface
 - 2. Real-time integration for updated information
+## INPUT /OUTPUT OF THE MODEL
+<img width="951" alt="Screenshot 2024-07-21 011938" src="https://github.com/user-attachments/assets/e631998b-063d-4e10-bd19-a97876eef624">
+<img width="959" alt="Screenshot 2024-07-21 110851" src="https://github.com/user-attachments/assets/44e20a3a-285d-4157-99ab-e5e04f78273f">
+<img width="631" alt="Screenshot 2024-07-21 110920" src="https://github.com/user-attachments/assets/e421cf7b-66a2-4b4a-ad1c-7f0288a93265">
+
+

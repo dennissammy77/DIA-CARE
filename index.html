@@ -1,0 +1,43 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+</head>
+<body>
+    <h1>Diabetes Prediction</h1>
+    <form action="/" method="post">
+        <label for="random_blood_sugar">Random Blood Sugar (mmol/L):</label><br>
+        <input type="number" step="0.01" id="random_blood_sugar" name="random_blood_sugar" required><br><br>
+
+        <label for="bmi">BMI:</label><br>
+        <input type="number" step="0.01" id="bmi" name="bmi" required><br><br>
+
+        <label for="systolic_bp">Systolic BP:</label><br>
+        <input type="number" step="0.01" id="systolic_bp" name="systolic_bp" required><br><br>
+
+        <label for="diastolic_bp">Diastolic BP:</label><br>
+        <input type="number" step="0.01" id="diastolic_bp" name="diastolic_bp" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction is not none %}
+    <h2>Prediction: {{ 'Diabetic' if prediction else 'Non-Diabetic' }}</h2>
+    <h3>Suggested Meals:</h3>
+    <ul>
+        {% for meal in meals %}
+        <li>{{ meal }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Suggested Exercises:</h3>
+    <ul>
+        {% for exercise in exercises %}
+        <li>{{ exercise }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
