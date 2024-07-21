@@ -1,10 +1,10 @@
+import { router } from 'expo-router';
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet, Text, Alert } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Text, Alert, TouchableOpacity } from 'react-native';
 
 export default function SignUpScreen() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [age, setAge] = useState(20);
   const [password, setPassword] = useState('');
 
   const handleSignUp = () => {
@@ -43,6 +43,9 @@ export default function SignUpScreen() {
         secureTextEntry
       />
       <Button title="Sign Up" onPress={handleSignUp} />
+      <TouchableOpacity onPress={(()=>{router.push('/signin')})}>
+        <Text style={styles.link}>Already have an account? Sign In</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -64,5 +67,10 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     paddingHorizontal: 10,
     borderRadius: 5,
+  },
+  link: {
+    marginTop: 20,
+    color: 'blue',
+    textAlign: 'center',
   },
 });
