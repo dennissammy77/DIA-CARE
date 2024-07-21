@@ -37,7 +37,7 @@ export default function ADD(){
               <ThemedText>{getDate()}</ThemedText>
             </ThemedView>
 
-            <ThemedView style={{backgroundColor:Colors.secondaryBase, marginVertical:40,paddingVertical:20, paddingHorizontal:10, borderRadius:20}}>
+            <ThemedView style={{backgroundColor:Colors.secondaryBase, marginVertical:10,paddingVertical:20, paddingHorizontal:10, borderRadius:20}}>
               <ThemedText style={{color:Colors.primary}}>Glucose level</ThemedText>
               <TextInput
                 style={{ flex:1,height: 50, paddingHorizontal:10, paddingVertical: 5, marginTop: 20, backgroundColor: Colors.base, borderRadius:10 }}
@@ -46,6 +46,28 @@ export default function ADD(){
                 // onChangeText={text => setSearchText(text)}
               />
             </ThemedView>
+
+            <ThemedView style={{backgroundColor:'#deffcc', marginVertical:10,paddingVertical:20, paddingHorizontal:10, borderRadius:20}}>
+              <ThemedText style={{color:'#1d661d'}}>Diastolic level</ThemedText>
+              <TextInput
+                style={{ flex:1,height: 50, paddingHorizontal:10, paddingVertical: 5, marginTop: 20, backgroundColor: Colors.base, borderRadius:10 }}
+                placeholder="diastolic bp"
+                keyboardType='numeric'
+                // onChangeText={text => setSearchText(text)}
+              />
+            </ThemedView>
+
+            <ThemedView style={{backgroundColor:'#e8edff', marginVertical:10,paddingVertical:20, paddingHorizontal:10, borderRadius:20}}>
+              <ThemedText style={{color:'#456dff'}}>Systolic level</ThemedText>
+              <TextInput
+                style={{ flex:1,height: 50, paddingHorizontal:10, paddingVertical: 5, marginTop: 20, backgroundColor: Colors.base, borderRadius:10 }}
+                placeholder="systolic bp"
+                keyboardType='numeric'
+                // onChangeText={text => setSearchText(text)}
+              />
+            </ThemedView>
+
+            
 
             <ThemedView style={{flexDirection:'row', justifyContent:'space-between', marginTop:10,  borderRadius: 20, height: 150, }}>
               

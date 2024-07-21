@@ -94,3 +94,9 @@ export function FOOD_ICON({name, style, ...rest }: Props){
         <MaterialCommunityIcons size={28} style={style} {...rest} name={name || 'food-apple'}/>
     );
 }
+
+export function ICON_COMPONENT({name, style, ...rest }: Props){
+    return (
+        <MaterialCommunityIcons size={28} style={style} {...rest} name={name}/>
+    );
+}
