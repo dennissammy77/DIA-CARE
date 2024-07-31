@@ -21,6 +21,18 @@ export default function ADD(){
     
     return moment(date).format('LLL');
   };
+  const [glucose,setglucose]=useState(0);
+  const [diastolic,setdisatolic]=useState(0);
+  const [systolic,setsystolic]=useState(0);
+
+  const HANDLE_SUBMIT=()=>{
+    const data = {
+      glucose:glucose,
+      diastolic:diastolic,
+      systolic:systolic,
+      date: moment(date).format('YYYY-MM-DD')
+    }
+  }
 
   
   return (
@@ -36,6 +48,9 @@ export default function ADD(){
             <ThemedView style={{backgroundColor:Colors.tertiary, marginVertical:10,paddingVertical:10, paddingHorizontal:10, borderRadius:10}}>
               <ThemedText>{getDate()}</ThemedText>
             </ThemedView>
+            <Text>
+              {glucose}{diastolic}{systolic}
+            </Text>
 
             <ThemedView style={{backgroundColor:Colors.secondaryBase, marginVertical:10,paddingVertical:20, paddingHorizontal:10, borderRadius:20}}>
               <ThemedText style={{color:Colors.primary}}>Glucose level</ThemedText>
@@ -43,7 +58,8 @@ export default function ADD(){
                 style={{ flex:1,height: 50, paddingHorizontal:10, paddingVertical: 5, marginTop: 20, backgroundColor: Colors.base, borderRadius:10 }}
                 placeholder="mmol/l"
                 keyboardType='numeric'
-                // onChangeText={text => setSearchText(text)}
+                value={glucose.toString()}
+                onChangeText={text => setglucose(text)}
               />
             </ThemedView>
 
@@ -53,7 +69,8 @@ export default function ADD(){
                 style={{ flex:1,height: 50, paddingHorizontal:10, paddingVertical: 5, marginTop: 20, backgroundColor: Colors.base, borderRadius:10 }}
                 placeholder="diastolic bp"
                 keyboardType='numeric'
-                // onChangeText={text => setSearchText(text)}
+                value={diastolic.toString()}
+                onChangeText={text => setdisatolic(text)}
               />
             </ThemedView>
 
@@ -63,7 +80,8 @@ export default function ADD(){
                 style={{ flex:1,height: 50, paddingHorizontal:10, paddingVertical: 5, marginTop: 20, backgroundColor: Colors.base, borderRadius:10 }}
                 placeholder="systolic bp"
                 keyboardType='numeric'
-                // onChangeText={text => setSearchText(text)}
+                value={systolic.toString()}
+                onChangeText={text => setsystolic(text)}
               />
             </ThemedView>
 

@@ -18,7 +18,7 @@ export default function ParallaxScrollView({
 }: Props) {
   const scrollRef = useAnimatedRef<Animated.ScrollView>();
   return (
-    <ThemedView style={{flex:1,backgroundColor: backgroundColor || Colors.secondaryBase}} {...rest}>
+    <ThemedView style={{flex:1,backgroundColor: backgroundColor || Colors.base}} {...rest}>
       <Animated.ScrollView ref={scrollRef} scrollEventThrottle={16}>
         <ThemedView style={styles.content}>{children}</ThemedView>
       </Animated.ScrollView>
@@ -27,10 +27,6 @@ export default function ParallaxScrollView({
 }
 
 const styles = StyleSheet.create({
-  header: {
-    height: 250,
-    overflow: 'hidden',
-  },
   content: {
     flex: 1,
     gap: 16,
